@@ -11,6 +11,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container d-flex flex-row justify-content-between">
+          <ul><%= link_to "Logo sample app", '#', id: "logo" %></ul>
+          <nav>
+            <ul class="nav pull-right">
+               <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to 'About', static_pages_about_path %></li>
+              <li><%= link_to 'Help', static_pages_help_path %></li>
+              <li><%= link_to 'Contacts', static_pages_contact_path %></li>
+             <li><%= link_to "Sign in", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
