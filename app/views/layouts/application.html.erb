@@ -2,33 +2,17 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
   </head>
-
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container d-flex flex-row justify-content-between">
-          <ul><%= link_to "Logo sample app", '#', id: "logo" %></ul>
-          <nav>
-            <ul class="nav pull-right">
-               <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to 'About', static_pages_about_path %></li>
-              <li><%= link_to 'Help', static_pages_help_path %></li>
-              <li><%= link_to 'Contacts', static_pages_contact_path %></li>
-             <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

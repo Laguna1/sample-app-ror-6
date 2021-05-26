@@ -6,9 +6,9 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 10px;
+// }
 
 section {
   overflow: auto;
@@ -20,10 +20,9 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
@@ -55,20 +54,45 @@ h1, h2, h3, h4, h5, h6 {
 
   /* header */
 
-#logo {
+  #logo {
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: red;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
     line-height: 1;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
   
-  #logo:hover {
-    color: #fff;
-    text-decoration: none;
+  /* footer */
+
+  footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #999;
+    a {
+      color: #555;
+      &:hover {
+        color: #222;
+      }
+    }
+    small {
+      float: left;
+    }
+    ul {
+      float: right;
+      list-style: none;
+      li {
+        float: left;
+        margin-left: 10px;
+      }
+    }
   }
   
