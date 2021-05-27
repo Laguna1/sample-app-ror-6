@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get  'static_pages/about'
   get  'static_pages/contact'
   get  'signup' => 'users#new'
-
+  get    'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :users
+  resources :sessions, only: %i[new create destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
