@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <div class="d-flex justify-content-center">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <h6><%= @user.email %></h6>
+      <p>?User_id:<%= @user.id %>?</p>
+    </section>
+  </div>
+</div>
