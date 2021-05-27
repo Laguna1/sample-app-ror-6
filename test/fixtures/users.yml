@@ -7,3 +7,8 @@ one:
 two:
   name: MyString
   email: MyString
+
+oksana:
+  name: Oksana Petrova
+  email: oksana@mail.com
+  password_digest: password
